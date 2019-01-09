@@ -1,0 +1,19 @@
+{% extends "./backend/pages/base.html" %}
+{% block title %} Start {% endblock %}
+{% block head %}
+<link href="/css/index.css?v={{version}}" rel="stylesheet">
+{% endblock %}
+{% block app %}
+
+<img class="colored-simon" src="/images/simoncolor.png">
+<div class="wrapper">
+    <div class="modal shadowed">
+        <h1 > Select your user</h1>
+        <form action="/players" method="POST">
+            <label>Name<input type="text" name="name" required></label>
+            <input class="modal-btn clickable" type="submit" value="Go">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

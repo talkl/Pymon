@@ -1,0 +1,193 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+.game-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    flex:1;
+}
+
+.game{
+    position: relative;
+    min-width:150px;
+    max-width: 150px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 10px;
+    background-color: whitesmoke;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.game img{
+    width: 100%;
+    opacity: 0.5;
+}
+
+.game:hover img{
+    opacity: 1;
+}
+
+.game-bottom{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial ;
+    color: white;
+    background-color: rosybrown;
+    padding: 5px;
+}
+
+.game:hover .game-bottom{
+    background-color: brown;
+}
+
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #1e5799;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+}
+
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #1e5799;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+}
+
+.won .ribbon span {
+    background: linear-gradient(#7fdf7f 0%, #2fa81f 100%);
+}
+
+.won .ribbon span::before {
+    border-left: 3px solid #2fa81f;
+    border-top: 3px solid #2fa81f;
+}
+
+.won .ribbon span::after {
+    border-right: 3px solid #2fa81f;
+    border-top: 3px solid #2fa81f;
+}
+
+.on .ribbon span {
+    background: linear-gradient(#e8eeb5 0%, #d7e611 100%);
+}
+
+.on .ribbon span::before {
+    border-left: 3px solid #d7e611;
+    border-top: 3px solid #d7e611;
+}
+
+.on .ribbon span::after {
+    border-right: 3px solid #d7e611;
+    border-top: 3px solid #d7e611;
+}
+
+.failed .ribbon span {
+    background: linear-gradient(#e99a9a 0%, #b6261b 100%);
+}
+
+.failed .ribbon span::before {
+    border-left: 3px solid #b6261b;
+    border-top: 3px solid #b6261b;
+}
+
+.failed .ribbon span::after {
+    border-right: 3px solid #b6261b;
+    border-top: 3px solid #b6261b;
+}
+
+footer {
+    background-color: whitesmoke;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+form{
+    padding: 12px;
+    color: #333;
+}
+
+.btn, form input[type='submit']{
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.btn, form input[type='submit']:hover{
+    background-color:crimson;
+}
+
+form input[type='text']{
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #999;
+    background-color: transparent;
+    outline: none;
+    color: #333;
+    margin-left: 10px;
+}
+
+form h3{
+    margin:0;
+}
+
+nav{
+    text-align:center;
+}
+
+.no-games{
+    font-size: 20px;
+    font-family: Arial;
+    color: #999;
+}
+
+a {
+    margin: 0 15px;
+}

@@ -1,0 +1,46 @@
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+}
+
+.modal{
+    background-color: rgba(245, 245, 245, 0.7);
+    color: #333;
+    z-index: 123;
+    padding:15px;
+    border-radius: 4px;
+}
+
+.modal-btn{
+    background-color: brown;
+    color: white;
+    width: 100%;
+    border:none;
+    padding:20px 20px;
+    border-radius: 20px;
+    outline:none;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.modal-btn:hover{
+    background-color: crimson;
+}
+
+label{
+    color:#999;
+}
+
+input{
+    padding: 10px 0;
+    font-size: 20px;
+    border:none;
+    border-bottom: 2px solid #999;
+    width: 100%;
+    background-color: transparent;
+    outline:none;
+    color:#333;
+}

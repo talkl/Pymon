@@ -1,0 +1,30 @@
+{% extends "./backend/pages/base.html" %}
+
+{% block title %} High Scores {% endblock %}
+
+{% block head %}
+<link href="/css/high-scores.css?version={{version}}" rel="stylesheet" />
+{% endblock %}
+
+{% block app %}
+
+<h1>High Scores</h1>
+<table>
+    <tr>
+        <th>Player</th>
+        <th>Wins</th>
+    </tr>
+    {% for player in highScores %}
+        <tr>
+            <td>
+                {{player["player"]}}
+            </td>
+            <td>
+                {{player["wins"]}}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<br />
+<a href="/games"><button class="btn clickable">Back to Games</button></a>
+{% endblock %}

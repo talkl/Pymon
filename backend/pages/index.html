@@ -1,0 +1,31 @@
+{% extends "./backend/pages/base.html" %}
+{% block title %}{% endblock %}
+{% block head %} 
+<link href="/css/index.css?v={{version}}" rel="stylesheet">
+{% endblock %}
+{% block app %}
+
+<img class="colored-simon" src="/images/simoncolor.png">
+<div class="wrapper">
+<div class="modal shadowed">
+    <h1 >Welcome to PYmon</h1>
+    <div>PYmon is an online multiplayer version of the famous Hasbro game simon</div>
+    <div>The rules are simple...
+        <ol>
+            <li>Click the start button below</li>
+            <li>Select a user name</li>
+            <li>Join or create a new game</li>
+            <li>Wait for other players to join</li>
+            <li>Once all players listened to the sequence the game starts</li>
+            <li>On your turn, press the correct light button according to the sequence</li>
+            <li>If you failed, you'r out... </li>
+            <li>Once the sequence completed all the remaining players are winners! Yay!</li>
+            <li>Try to win as many games as possible</li>
+        </ol>
+    </div>
+    <a href="/start"><button class="modal-btn">Start</button></a>
+</div>
+</div>
+
+
+{% endblock %}

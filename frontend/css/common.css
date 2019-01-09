@@ -1,0 +1,134 @@
+html, body{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+}
+
+body{
+    background-image: url(/images/simonbg.png);
+    background-size: 120px;
+}
+
+h1{
+    font-family:"Roboto Slab";
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+}
+
+[onclick], .clickable, button{
+    cursor: pointer;
+}
+
+.shadowed{
+    -webkit-box-shadow: 10px 10px 35px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 35px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 35px -13px rgba(0,0,0,0.75);
+}
+
+  @keyframes blinker {
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+.hidden{
+  visibility: hidden;
+  display:none;
+}
+
+@keyframes movearound {
+    0%  {top:240px;left:840px;opacity:0;}
+    5%  {top:240px;left:840px;opacity:1;}
+    10%  {top:0px;left:0px;opacity:0;}
+    15%  {top:0px;left:0px;opacity:1;}
+    20%  {top:360px;left:720px;opacity:0;}
+    25%  {top:360px;left:720px;opacity:1;}
+    30%  {top:120px;left:480px;opacity:0;}
+    35%  {top:120px;left:480px;opacity:1;}
+    40% {top:0;left:600px;opacity:0;}
+    50% {top:0;left:600px;opacity:1;}
+    60% {top:120px;left:360px;opacity:0;}
+    70% {top:120px;left:360px;opacity:1;}
+    80% {top:360px;left:600px;opacity:0;}
+    90% {top:360px;left:600px;opacity:1;}
+    95% {top:720px;left:720px;opacity:0;}
+    100% {top:720px;left:720px;opacity:1;}
+}
+
+.colored-simon{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 120px;
+    z-index:-1;
+    animation-name: movearound;
+    animation-timing-function: steps(1);
+    animation-duration: 15s;
+    transition: opacity 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* loader */
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 32px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }

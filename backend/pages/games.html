@@ -1,0 +1,39 @@
+{% extends "./backend/pages/base.html" %}
+{% block title %} Games{% endblock %}
+{% block head %}
+<link href="/css/games.css?v={{version}}" rel="stylesheet">
+<script defer src="/js/moreUtils.js"></script>
+{% endblock %}
+{% block app %}
+<div id="gamesid" class="page">
+<header>
+<h1 > Available Games</h1>
+{% if games|length > 0 %}
+    <nav id="navBar"><span class="filter clickable">All</span> | <span class="filter clickable">Open</span> | <span class="filter clickable">Won</span> | <span class="filter clickable" >Failed</span></nav>
+{% endif %}
+</header>
+<main class="game-list">
+{% for g in games %}
+        <a class="game shadowed {{g.status}}" href="/games/{{g.id}}">
+            <div class="ribbon"><span>{{g.status}}</span></div>
+            <img src="/images/simoncolor.png">
+            <div class="game-bottom">
+                {{g.name}}
+            </div>
+        </a>
+{% else %}
+    <div class="no-games">No available games :(</div>
+{% endfor %}
+</main>
+<footer>
+    <form method="POST" action="/games">
+        <h3>New Game</h3>
+        <label>Name:<input type="text" name="name" required></label>
+        <input type="submit" class="clickable" value="Create" />
+    </form>
+    <a href="/high-scores">
+        <button class="clickable btn">High Scores</button>
+    </a>
+</footer>
+</div>
+{% endblock %}

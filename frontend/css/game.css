@@ -1,0 +1,213 @@
+.main{
+    display:flex;
+    height: 100vh;
+}
+
+.players{
+    flex:1;
+    padding:10px;
+}
+
+.player{
+    background-color: #DDD;
+    border-radius: 3px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-name{
+    margin-left:3px;
+}
+
+.player-status{
+    margin-left: 3px;
+    padding: 5px;
+    width: 35px;
+    font-size: 12px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.player-status.ready{
+    background-color: lightblue;
+}
+
+.player-status.failed{
+    background-color:lightcoral;
+}
+
+.player-status.won{
+    background-color:lightgreen;
+}
+
+.player-status.turn{
+    background-color:orange;
+    animation: blinker 1s linear infinite;
+}
+
+.join-btn{
+    background-color: brown;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.join-btn.loading{
+    cursor: default;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.sequence{
+    padding: 10px;
+}
+
+.sequence-light{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    margin: 0px 5px;
+}
+
+.inner-light{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-image: url(/images/plastic.png);
+}
+
+.simon{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vh;
+    height: 70vh;
+    background-color: #333;
+    border-radius: 100%;
+    padding: 5vh;
+    margin:auto;
+    box-shadow: 10px 10px 53px -15px rgba(0,0,0,0.75);
+}
+
+.simon .light-btn.disabled{
+    cursor: default;
+    border:none;
+}
+
+.simon .light-btn{
+    box-sizing: border-box;
+    -webkit-border-radius:320px 20px 20px;
+    -moz-border-radius:320px 20px 20px;
+    -o-border-radius:320px 20px 20px;
+    border-radius:320px 20px 20px;
+    width: 42%;
+    height: 42%;
+    margin: 4%;
+    background-image: url('/images/plastic.png');
+    background-position: center;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    opacity: 0.7;
+    outline: none;
+}
+
+.simon .light-btn:nth-child(2){
+    transform: rotate(90deg);
+}
+.simon .light-btn:nth-child(3){
+    transform: rotate(270deg);
+}
+.simon .light-btn:nth-child(4){
+    transform: rotate(180deg);
+}
+
+.simon .light-btn.active{
+    border:3px solid black;
+    opacity: 1;
+}
+
+.simon .play-btn{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    transform:translateX(-50%) translateY(-50%);
+    color:red;
+    font-family: Lobster;
+    font-size: 30px;
+    box-shadow: inset 0px 0px 26px 0px rgba(0,0,0,0.62);
+    outline: none;
+    border:none;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    background-color: whitesmoke;
+}
+
+.game-name{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    font-family: 'Roboto Slab';
+}
+
+.view-mode{
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+    color: #999;
+    border-bottom: 1px solid #333;
+}
+
+.game-status{
+    font-size: 45px;
+    padding: 5px 0;
+    font-family: Lobster;
+    text-align: center;
+}
+
+.game-status.loading{
+    color:#CCC;
+}
+
+.game-status.won{
+    color:green;
+}
+
+.game-status.on{
+    color:orange;
+}
+
+.game-status.failed{
+    color:red;
+}
+
+.game-status.open{
+    color:blue;
+}

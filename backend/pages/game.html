@@ -1,0 +1,13 @@
+{% extends "./backend/pages/base.html" %}
+{% block title %} Play {% endblock %}
+{% block head %}
+<link href="/css/game.css?v={{version}}" rel="stylesheet">
+<script defer src="/js/main.js"></script>
+{% endblock %}
+{% block app %}
+<div id="game">
+
+</div>
+<!-- allowing autoplay for sound-->
+<iframe src="/sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+{% endblock %}
